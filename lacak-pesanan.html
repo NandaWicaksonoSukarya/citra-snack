@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Lacak Pesanan - Citra Snack</title>
+
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/components.css">
+
+    <link
+        rel="stylesheet"
+        href="assets/css/lacak-pesanan.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <div id="navbar"></div>
+
+
+
+    <!-- Lacak Pesanan -->
+
+    <main class="tracking-page">
+
+        <div class="container">
+
+            <div class="tracking-card">
+
+                <div class="tracking-icon">
+
+                    <i class="bi bi-search"></i>
+
+                </div>
+
+
+                <h1>
+                    Lacak Pesanan
+                </h1>
+
+
+                <p class="tracking-description">
+
+                    Masukkan nomor pesanan dan nomor WhatsApp
+                    yang digunakan saat melakukan pemesanan.
+
+                </p>
+
+
+                <form id="trackingForm">
+
+
+                    <!-- Nomor Pesanan -->
+
+                    <div class="form-group">
+
+                        <label for="orderId">
+                            Nomor Pesanan
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-receipt"></i>
+
+                            <input
+                                type="text"
+                                id="orderId"
+                                placeholder="Contoh: CS-20261002-001"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WhatsApp -->
+
+                    <div class="form-group">
+
+                        <label for="whatsapp">
+                            Nomor WhatsApp
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-whatsapp"></i>
+
+                            <input
+                                type="tel"
+                                id="whatsapp"
+                                placeholder="Contoh: 08xxxxxxxxxx"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Error -->
+
+                    <div
+                        id="trackingError"
+                        class="tracking-error"
+                        style="display: none;">
+
+                        <i class="bi bi-exclamation-circle"></i>
+
+                        <span>
+                            Pesanan tidak ditemukan.
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Button -->
+
+                    <button
+                        type="submit"
+                        class="btn-track">
+
+                        <i class="bi bi-search"></i>
+
+                        Lihat Status Pesanan
+
+                    </button>
+
+
+                </form>
+
+
+                <a
+                    href="index.html"
+                    class="back-menu">
+
+                    <i class="bi bi-arrow-left"></i>
+
+                    Kembali ke Menu
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <div id="footer"></div>
+
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- Components -->
+
+    <script src="assets/js/components.js"></script>
+
+
+    <!-- Tracking -->
+
+    <script type="module" src="assets/js/lacak-pesanan.js"></script>
+
+</body>
+
+</html>

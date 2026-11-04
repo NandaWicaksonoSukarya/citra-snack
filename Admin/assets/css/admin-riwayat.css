@@ -1,0 +1,448 @@
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.page-header h1 {
+    margin: 0 0 6px;
+    color: #222;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.page-header p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+.filter-card {
+    display: flex;
+    align-items: end;
+    gap: 20px;
+
+    padding: 18px 20px;
+    margin-bottom: 20px;
+
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.filter-left {
+    width: 180px;
+}
+
+.filter-left label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.filter-left .form-select {
+    border-color: #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.search-box {
+    position: relative;
+    width: 320px;
+}
+
+.search-box i {
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+
+    color: #999;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 12px 10px 38px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #ff8a00;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-card {
+    overflow: hidden;
+
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.table-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.table-header h5 {
+    margin: 0 0 4px;
+
+    color: #222;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.table-header span {
+    color: #999;
+    font-size: 13px;
+}
+
+.table {
+    margin: 0;
+}
+
+.table thead th {
+    padding: 14px 18px;
+
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
+
+    color: #777;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 15px 18px;
+
+    border-bottom: 1px solid #f1f1f1;
+
+    color: #555;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr:hover {
+    background: #fffaf5;
+}
+
+
+/* =========================
+   ORDER ID
+========================= */
+
+.order-id {
+    color: #333;
+    font-weight: 600;
+}
+
+
+/* =========================
+   STATUS BADGE
+========================= */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-selesai {
+    background: #eaf8ef;
+    color: #198754;
+}
+
+.status-dibatalkan {
+    background: #fff0f0;
+    color: #dc3545;
+}
+
+.status-dibayar {
+    background: #eaf8ef;
+    color: #198754;
+}
+
+.status-menunggu {
+    background: #fff8e5;
+    color: #b58105;
+}
+
+.status-gagal {
+    background: #fff0f0;
+    color: #dc3545;
+}
+
+
+/* =========================
+   ACTION BUTTON
+========================= */
+
+.detail-button {
+    padding: 6px 10px;
+
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 7px;
+
+    color: #666;
+    font-size: 12px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.detail-button:hover {
+    background: #ff8a00;
+    border-color: #ff8a00;
+    color: #fff;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+    padding: 60px 20px !important;
+
+    color: #aaa !important;
+    text-align: center;
+}
+
+.empty-state i {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #ddd;
+    font-size: 38px;
+}
+
+.empty-state p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-content {
+    overflow: hidden;
+
+    border: none;
+    border-radius: 14px;
+}
+
+.modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.modal-header small {
+    color: #999;
+}
+
+.modal-body {
+    padding: 24px;
+}
+
+.detail-section {
+    margin-bottom: 22px;
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.detail-section h6 {
+    margin-bottom: 12px;
+
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.detail-section h6 i {
+    margin-right: 6px;
+    color: #ff8a00;
+}
+
+.detail-section p {
+    margin: 0;
+
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   DETAIL GRID
+========================= */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.detail-grid div {
+    padding: 12px;
+
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.detail-grid span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #999;
+    font-size: 11px;
+}
+
+.detail-grid strong {
+    display: block;
+
+    color: #333;
+    font-size: 13px;
+}
+
+
+/* =========================
+   DETAIL ITEMS
+========================= */
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-item-name {
+    color: #444;
+    font-size: 13px;
+}
+
+.detail-item-qty {
+    color: #999;
+    font-size: 12px;
+}
+
+.detail-item-price {
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 0;
+
+    font-size: 13px;
+}
+
+.total-row {
+    margin-top: 5px;
+    padding-top: 15px;
+
+    border-top: 1px solid #eee;
+
+    font-size: 15px;
+}
+
+.total-row strong {
+    color: #ff8a00;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .filter-card {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .filter-left,
+    .search-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-main {
+        width: 100%;
+        margin-left: 0;
+        padding: 75px 15px 25px;
+    }
+}

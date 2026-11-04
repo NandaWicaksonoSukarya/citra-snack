@@ -1,0 +1,761 @@
+/* =====================================================
+   STATUS PESANAN
+===================================================== */
+
+.status-page {
+    background: #fffdf9;
+    min-height: 100vh;
+    padding: 55px 0 80px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.status-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.success-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff3d2;
+    color: #e9a008;
+
+    font-size: 34px;
+}
+
+.status-header h1 {
+    margin-bottom: 10px;
+
+    color: #292929;
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.status-header p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   NOMOR PESANAN
+========================= */
+
+.order-number-card {
+    max-width: 650px;
+    margin: 0 auto 25px;
+
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+
+    border: 1px solid #f0e4c8;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(180, 130, 40, 0.06);
+}
+
+.order-number-card span {
+    color: #777;
+    font-size: 13px;
+}
+
+.order-number-card strong {
+    color: #e39a00;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.status-card,
+.order-detail-card,
+.customer-detail-card {
+    max-width: 650px;
+    margin: 0 auto 25px;
+
+    background: #fff;
+
+    border: 1px solid #f0e4c8;
+    border-radius: 16px;
+
+    box-shadow: 0 5px 20px rgba(180, 130, 40, 0.06);
+}
+
+.status-card {
+    padding: 28px;
+}
+
+.status-card h2,
+.order-detail-card h2,
+.customer-detail-card h2 {
+    margin: 0 0 25px;
+
+    color: #292929;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.status-timeline {
+    position: relative;
+}
+
+.status-step {
+    position: relative;
+
+    display: flex;
+    gap: 18px;
+
+    padding-bottom: 30px;
+}
+
+.status-step:last-child {
+    padding-bottom: 0;
+}
+
+
+/* Garis */
+
+.status-step:not(:last-child)::before {
+    content: "";
+
+    position: absolute;
+
+    left: 19px;
+    top: 40px;
+
+    width: 2px;
+    height: calc(100% - 10px);
+
+    background: #eee4cf;
+}
+
+
+/* Icon */
+
+.status-step .status-icon {
+    position: relative;
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f4f0e8;
+    color: #aaa;
+
+    font-size: 17px;
+}
+
+.status-step.active .status-icon {
+    background: #f0a500;
+    color: #fff;
+
+    box-shadow: 0 4px 12px rgba(240, 165, 0, 0.22);
+}
+
+
+/* Content */
+
+.status-content {
+    padding-top: 1px;
+}
+
+.status-content h3 {
+    margin: 0 0 5px;
+
+    color: #999;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.status-step.active .status-content h3 {
+    color: #e39a00;
+}
+
+.status-content p {
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.status-step.active .status-content p {
+    color: #777;
+}
+
+
+/* =========================
+   DETAIL PESANAN
+========================= */
+
+.order-detail-card {
+    overflow: hidden;
+}
+
+.card-header-custom {
+    padding: 25px 28px 0;
+}
+
+#orderItems {
+    padding: 0 28px;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #f3eee4;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item-image {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+    background: #f8f3e8;
+}
+
+.order-item-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.order-item-info {
+    flex: 1;
+}
+
+.order-item-info h3 {
+    margin: 0 0 4px;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.order-item-info span {
+    color: #999;
+    font-size: 11px;
+}
+
+.order-item-price {
+    color: #e39a00;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Total */
+
+.order-total {
+    margin-top: 5px;
+    padding: 20px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fffaf0;
+
+    border-top: 1px solid #f3e6c7;
+}
+
+.order-total span {
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.order-total strong {
+    color: #e39a00;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   DATA PEMESAN
+========================= */
+
+.customer-detail-card {
+    padding: 28px;
+}
+
+.customer-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.customer-info > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.customer-info span {
+    color: #999;
+    font-size: 11px;
+}
+
+.customer-info strong {
+    color: #444;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.customer-address {
+    grid-column: 1 / -1;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.status-actions {
+    max-width: 650px;
+    margin: 5px auto 0;
+
+    text-align: center;
+}
+
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 24px;
+
+    background: #f0a500;
+    border: 1px solid #f0a500;
+    border-radius: 9px;
+
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.btn-primary-custom:hover {
+    background: #d99200;
+    border-color: #d99200;
+    color: #fff;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 767.98px) {
+
+    .status-page {
+        padding: 40px 0 60px;
+    }
+
+    .status-header h1 {
+        font-size: 23px;
+    }
+
+    .status-header p {
+        font-size: 13px;
+    }
+
+    .order-number-card {
+        padding: 17px 18px;
+    }
+
+    .status-card,
+    .customer-detail-card {
+        padding: 22px 18px;
+    }
+
+    .card-header-custom {
+        padding: 22px 18px 0;
+    }
+
+    #orderItems {
+        padding: 0 18px;
+    }
+
+    .order-total {
+        padding: 18px;
+    }
+
+    .customer-info {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .customer-address {
+        grid-column: auto;
+    }
+
+    .order-item {
+        gap: 10px;
+    }
+
+    .order-item-image {
+        width: 48px;
+        height: 48px;
+    }
+
+    .order-item-price {
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   NOMOR PESANAN
+========================= */
+
+.order-number-card {
+    max-width: 650px;
+    margin: 0 auto 15px;
+
+    padding: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: #fff;
+
+    border: 1px solid #f0e4c8;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 20px rgba(180, 130, 40, 0.06);
+}
+
+.order-number-content {
+    flex: 1;
+}
+
+.order-number-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.order-number-label i {
+    color: #e9a008;
+}
+
+.order-number-card strong {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #e39a00;
+
+    font-size: 19px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+.order-number-content p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 11px;
+}
+
+
+/* Tombol salin */
+
+.btn-copy-order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 9px 13px;
+
+    border: 1px solid #ead7ad;
+    border-radius: 8px;
+
+    background: #fffaf0;
+
+    color: #d99200;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.btn-copy-order:hover {
+    background: #f0a500;
+    border-color: #f0a500;
+    color: #fff;
+}
+
+
+/* =========================
+   INFORMASI LACAK
+========================= */
+
+.tracking-notice {
+    max-width: 650px;
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    background: #fffaf0;
+
+    border: 1px solid #f1dfb4;
+    border-radius: 11px;
+
+    color: #806a3e;
+}
+
+.tracking-notice > i {
+    margin-top: 2px;
+
+    color: #e9a008;
+
+    font-size: 16px;
+}
+
+.tracking-notice strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.tracking-notice p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.tracking-notice p strong {
+    display: inline;
+    margin: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 575.98px) {
+
+    .order-number-card {
+        padding: 19px;
+
+        align-items: flex-start;
+    }
+
+    .order-number-card strong {
+        font-size: 16px;
+    }
+
+    .btn-copy-order {
+        padding: 8px 10px;
+    }
+
+    .btn-copy-order span {
+        display: none;
+    }
+
+    .tracking-notice {
+        padding: 13px 15px;
+    }
+
+}
+
+.payment-status-card {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 18px 30px;
+
+    background: #fff;
+
+    border: 1px solid #eee;
+    border-radius: 14px;
+
+    box-sizing: border-box;
+}
+
+.payment-status-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #fff4d6;
+    color: #e9a008;
+    font-size: 20px;
+}
+
+.payment-status-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-status-label {
+    font-size: 12px;
+    color: #888;
+}
+
+.payment-status-value {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.payment-status-value.paid {
+    color: #198754;
+}
+
+.payment-status-value.pending {
+    color: #e9a008;
+}
+
+.payment-status-value.failed {
+    color: #dc3545;
+}
+
+.payment-status-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+}
+
+.payment-status-icon {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #fff4d6;
+    color: #e9a008;
+    font-size: 20px;
+}
+
+.payment-status-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-status-label {
+    font-size: 12px;
+    color: #888;
+}
+
+.payment-status-value {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.payment-status-value.paid {
+    color: #198754;
+}
+
+.payment-status-value.pending {
+    color: #e9a008;
+}
+
+.payment-status-value.failed {
+    color: #dc3545;
+}

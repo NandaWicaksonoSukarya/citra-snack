@@ -1,0 +1,261 @@
+
+/* =====================================
+   SIDEBAR CITRA SNACK
+===================================== */
+
+.sidebar,
+.sidebar * {
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 250px !important;
+    height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: #fff;
+    border-right: 1px solid #eee;
+    z-index: 1040;
+    transition: transform 0.3s ease;
+}
+
+/* BRAND */
+
+.sidebar .sidebar-brand {
+    padding: 0 14px;
+    margin-bottom: 38px;
+    font-size: 23px;
+    font-weight: 700;
+    color: #292929;
+}
+
+.sidebar .sidebar-brand span {
+    color: #e9a008;
+}
+
+/* ADMIN LABEL */
+
+.sidebar .admin-label {
+    padding: 0 14px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+/* NAVIGATION */
+
+.sidebar .sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar .sidebar-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 14px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #777 !important;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sidebar .sidebar-link i {
+    width: 18px;
+    flex-shrink: 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+.sidebar .sidebar-link:hover {
+    color: #d88e00 !important;
+    background: rgba(240, 165, 0, 0.08);
+}
+
+.sidebar .sidebar-link.active {
+    color: #fff !important;
+    background: #f0a500;
+    box-shadow: 0 5px 12px rgba(240, 165, 0, 0.18);
+}
+
+/* SIDEBAR BOTTOM */
+
+.sidebar .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid #f1dfb2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar .logout-button {
+    text-align: left;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.admin-main {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    min-width: 0;
+    min-height: 100vh;
+    transition: width 0.3s ease, margin-left 0.3s ease;
+}
+
+/* =====================================
+   HAMBURGER
+===================================== */
+
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    left: 265px;
+    z-index: 1102;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fff;
+    color: #292929;
+    font-size: 22px;
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: #fff4d6;
+    color: #d88e00;
+}
+
+/* OVERLAY */
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1035;
+}
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media (min-width: 769px) {
+
+    body.sidebar-collapsed .sidebar {
+        transform: translateX(-100%) !important;
+    }
+
+    body.sidebar-collapsed .admin-main {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    body.sidebar-collapsed .sidebar-toggle {
+        left: 18px;
+    }
+
+    /* Beri ruang agar judul tidak tertutup hamburger */
+    .admin-header {
+        padding-left: 55px;
+    }
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1100px) and (min-width: 769px) {
+    .admin-main {
+        padding: 25px 18px;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 250px !important;
+        max-width: 85vw;
+        transform: translateX(-100%);
+        z-index: 1040;
+    }
+
+    body.mobile-sidebar-open .sidebar {
+        transform: translateX(0) !important;
+    }
+
+    .admin-main {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding: 75px 18px 25px !important;
+    }
+
+    .sidebar-toggle {
+        top: 15px;
+        left: 18px;
+    }
+
+    body.mobile-sidebar-open .sidebar-toggle {
+        left: min(265px, calc(85vw + 15px));
+    }
+
+    body.mobile-sidebar-open .sidebar-overlay {
+        display: block;
+    }
+
+    .sidebar-brand {
+        text-align: left;
+    }
+
+    .admin-label {
+        display: block;
+    }
+
+    .sidebar-link {
+        justify-content: flex-start;
+    }
+
+    .sidebar-link span {
+        display: inline;
+    }
+
+    .admin-header {
+        padding-left: 0;
+        align-items: flex-start;
+    }
+
+    .admin-header h1 {
+        font-size: 19px;
+    }
+
+    .admin-profile-info {
+        display: none;
+    }
+}
+ 

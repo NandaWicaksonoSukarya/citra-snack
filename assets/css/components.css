@@ -1,0 +1,353 @@
+/* =====================================================
+   CITRA SNACK - NAVBAR & FOOTER
+===================================================== */
+
+/* =====================================================
+   NAVBAR CITRA SNACK
+===================================================== */
+
+.navbar {
+    background: linear-gradient(
+        135deg,
+        #fff8e7 0%,
+        #fffdf8 55%,
+        #fff3d2 100%
+    );
+
+    border-bottom: 1px solid #f4dfaa;
+
+    padding: 14px 0;
+
+    box-shadow: 0 3px 15px rgba(180, 130, 40, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-brand {
+    font-size: 23px;
+    font-weight: 700;
+
+    color: #292929 !important;
+
+    text-decoration: none;
+
+    letter-spacing: -0.5px;
+}
+
+.navbar-brand span {
+    color: #e9a008;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.navbar .nav-link {
+    position: relative;
+
+    color: #666 !important;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    padding: 9px 16px !important;
+
+    border-radius: 20px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* HOVER */
+
+.navbar .nav-link:hover {
+    color: #d88e00 !important;
+
+    background: rgba(240, 165, 0, 0.10);
+}
+
+
+/* ACTIVE */
+
+.navbar .nav-link.active {
+    color: #ffffff !important;
+
+    background: #f0a500;
+
+    font-weight: 600;
+
+    box-shadow: 0 4px 10px rgba(240, 165, 0, 0.20);
+}
+
+
+/* HILANGKAN GARIS ACTIVE LAMA */
+
+.navbar .nav-link.active::after {
+    display: none;
+}
+
+
+/* =====================================================
+   MOBILE TOGGLER
+===================================================== */
+
+.navbar-toggler {
+    border: 1px solid #e8cf91;
+
+    background: #fffdf7;
+
+    border-radius: 9px;
+
+    padding: 7px 9px;
+}
+
+.navbar-toggler:focus {
+    box-shadow:
+        0 0 0 3px rgba(240, 165, 0, 0.12);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar-nav {
+        gap: 4px;
+
+        margin-top: 12px;
+
+        padding-top: 10px;
+
+        border-top: 1px solid #f1dfb2;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 12px !important;
+
+        border-radius: 8px;
+    }
+
+    .navbar .nav-link.active {
+        background: #f0a500;
+    }
+
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #252525;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+
+/* FOOTER MAIN */
+
+.footer-main {
+    padding: 50px 0 40px;
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand {
+    margin-bottom: 15px;
+}
+
+.footer-brand a {
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer-brand a span {
+    color: #f0a500;
+}
+
+
+/* FOOTER DESCRIPTION */
+
+.footer-description {
+    max-width: 360px;
+
+    color: #bdbdbd;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* FOOTER TITLE */
+
+.footer-title {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER LINKS */
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 9px;
+}
+
+.footer-links a {
+    color: #bdbdbd;
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #f0a500;
+}
+
+
+/* CONTACT */
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+
+    color: #bdbdbd;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    margin-bottom: 10px;
+}
+
+.footer-contact i {
+    color: #f0a500;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+
+/* SOCIAL MEDIA */
+
+.footer-social {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.footer-social a {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #444444;
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.footer-social a:hover {
+    background: #f0a500;
+    border-color: #f0a500;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+    border-top: 1px solid #3a3a3a;
+
+    padding: 18px 0;
+
+    text-align: center;
+
+    color: #999999;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .navbar-nav {
+        gap: 0;
+        margin-top: 12px;
+        padding-top: 8px;
+        border-top: 1px solid #eeeeee;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 5px !important;
+    }
+
+    .navbar .nav-link.active::after {
+        left: 5px;
+        right: auto;
+        width: 30px;
+        bottom: 4px;
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+    .footer-main {
+        padding: 40px 0 30px;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+}

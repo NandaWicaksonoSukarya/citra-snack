@@ -1,0 +1,278 @@
+/* =====================================================
+   LACAK PESANAN
+===================================================== */
+
+.tracking-page {
+    min-height: 100vh;
+
+    padding: 70px 0 90px;
+
+    background: #fffdf9;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.tracking-card {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #f0e4c8;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(180, 130, 40, 0.08);
+}
+
+
+/* =========================
+   ICON
+========================= */
+
+.tracking-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff3d2;
+
+    color: #e9a008;
+
+    font-size: 27px;
+}
+
+
+.tracking-card h1 {
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    color: #292929;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.tracking-description {
+    margin: 0 auto 30px;
+
+    max-width: 390px;
+
+    text-align: center;
+
+    color: #888;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #444;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-wrapper i {
+    position: absolute;
+
+    left: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #c79a42;
+
+    font-size: 16px;
+
+    pointer-events: none;
+}
+
+
+.input-wrapper input {
+    width: 100%;
+
+    padding: 12px 15px 12px 43px;
+
+    border: 1px solid #eadfca;
+
+    border-radius: 9px;
+
+    background: #fffdf9;
+
+    color: #333;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+
+.input-wrapper input::placeholder {
+    color: #b5b5b5;
+}
+
+
+.input-wrapper input:focus {
+    border-color: #f0b62e;
+
+    background: #fff;
+
+    box-shadow: 0 0 0 3px rgba(240, 165, 0, 0.10);
+}
+
+
+/* =========================
+   ERROR
+========================= */
+
+.tracking-error {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+
+    padding: 11px 13px;
+
+    border-radius: 8px;
+
+    background: #fff1f1;
+
+    color: #d9534f;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-track {
+    width: 100%;
+
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #f0a500;
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.btn-track:hover {
+    background: #d99200;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 15px rgba(240, 165, 0, 0.18);
+}
+
+
+/* =========================
+   BACK
+========================= */
+
+.back-menu {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-top: 22px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    text-decoration: none;
+}
+
+
+.back-menu:hover {
+    color: #d99200;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 575.98px) {
+
+    .tracking-page {
+        padding: 45px 15px 65px;
+    }
+
+
+    .tracking-card {
+        padding: 30px 22px;
+
+        border-radius: 15px;
+    }
+
+
+    .tracking-card h1 {
+        font-size: 22px;
+    }
+
+
+    .tracking-description {
+        font-size: 12px;
+    }
+
+}
